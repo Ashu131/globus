@@ -1,0 +1,550 @@
+body{
+  margin: 0px;
+  padding: 0px;
+} 
+h1{
+  font-size: 30px;
+}
+h2{
+  font-size: 22px;
+}
+h3{
+  font-size: 20px;
+}
+h4{
+  font-size: 30px;
+}
+h5{
+  font-size: 30px;
+}
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+/*Navbar Segment*/
+.navbar-nav li a {
+  color: #3ba0cc;
+  font-size: 25px;
+  padding-top: 30px;
+}
+.navbar-nav li a:hover{
+  background-color: #3a9cc9;
+  color: white;
+}
+.containery{
+  padding: 0px 35px;
+}
+.nav-colored { background-color:#fff; }
+.nav-transparent { background-color:transparent;}
+/*End of Navbar Segment*/ 
+/*Shop Now Segment*/
+.shop-now{
+  background-image: url(images/icons/contactus-bg.png);
+  color: white;
+  text-align: center;  
+}
+.shop-now h1{
+  margin: 60px 0px 20px 0px;
+}
+.shop-now h3{
+  margin: -30px 0px 40px 0px;
+}
+.shop-icon{
+  margin-top: -330px;
+  margin-left: 25px;
+}
+.shop-now a:link{
+  color: white;
+}
+/*Shop Now Segment*/
+/*Blog Section*/
+.our-blog h1{
+  text-align: center;
+  padding: 20px 0px;
+  color:#3a9cc8;
+}
+/*blog-1-border
+blog-row-2-text*/
+.blog-row-1-pic {
+  height: 200px;
+  width: 200px;
+  /*position: relative; */
+}
+.blog-row-2-pic {
+  height: 200px;
+  width: 200px;
+  margin-top: -20px;  
+/*  position: relative;*/
+}
+.blog-1-border{
+  height: 200px;
+  width: 200px;
+  margin-top: 10px;
+  /*position: absolute;*/
+  z-index: 1000;
+}
+.blog-2-border{
+  height: 200px;
+  width: 200px;
+  margin-top: -18px;
+}
+.blog-row-1-text{
+  color: white;
+  margin: -180px 5px 0px 10px;
+  padding: 10px 0px 20px 10px;
+  text-align: justify;
+  /*position: absolute;*/
+}
+.blog-row-2-text{
+  color: white;
+  margin-top: -160px;
+  padding: 10px 0px 20px 10px;
+  text-align: justify;
+}
+.wrapper {
+    text-align: center;
+    margin: 60px 0px 0px 10px;
+}
+.wrapper button{
+  margin-bottom: 40px;
+  padding: 5px;
+    width: 250px; 
+    background-image: url(images/icons/button.png);
+    font-size: 16px;
+}
+/*End of Blog Section*/
+/*Contact Us footer*/
+.footer{
+  padding: 20px 100px;
+  background-image: url(images/icons/contactus-bg.png);
+  background-size: cover;
+  color: white;
+}
+.footer h1{
+  text-align: center;
+  color: white;
+  margin: 60px 0px 30px 40px;
+}
+.footer h3{
+  margin: 30px 0px 30px 0px;
+  color: white;
+  border-bottom: 1px solid;
+  border-color: #4d85c4;
+  border-lengt
+}
+.contact-details span img{
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+.form-control{
+  margin: 10px 20px;
+  padding: 5px;
+  width: 400px;
+}
+.form-control-message{
+  height: 100px;
+  width: 400px;
+}
+.submit{
+  margin-left: 180px;
+}
+.footerlist-1 li{
+  display: inline;
+  margin: 10px 
+  
+}
+.footerlist-1 li a{
+  color: white;
+  padding: 0px 20px;
+}
+.wrapper-footer{
+  text-align: center;
+    margin: 30px 0px 0px 0px;
+    padding: 0px 100px;
+    color: white;
+}
+.social-icons span img {
+  height: 60px;
+  width: auto;
+  background-color: white;
+  padding: 10px 10px;
+  margin: 10px 25px;
+}
+/*End of Contact Us footer*/
+/*YOC segment*/
+.yoc{
+  text-align: center;
+  margin: 5px;
+  
+}
+.yoc span{
+  
+  padding: 10px 150px;
+  color: #3a9cc8;
+}
+.yoc span a;link{
+  color: #3a9cc8;
+}
+/*End of YOC segment*/
+/*Product.php sheet styling*/
+.our-products div{
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+.our-products h1{
+   color: #3a9cc8;
+  text-align: center;
+  margin: 100px 0px 50px 0px;
+}
+.sales{
+  height: 390px;
+  width: auto;
+  margin:20px 0px 10px 0px;
+}
+.sales img{
+  height: 250px;
+  width: auto;
+  border: 2px solid;
+  margin-bottom: 1px;
+  padding: 15px 15px;
+}
+.sales div{
+  padding: 5px 5px;
+  margin-top: 0px;
+  height: 90px;
+  width: auto;
+
+}
+.sales h3{
+  font-size: 15px;
+  padding-top: 0px;
+  color: white;
+}
+.sales h4{
+  font-size: 15px;
+}
+.sales div h3 {
+  padding: 5px 0px 5px 0px;
+  width: auto;
+  height: 10px;
+}
+.sales-info-1{
+  background-image: url(images/products/product-ui/bg-product-1.jpg);  
+}
+.sales-1 img {
+border-color: #dda17d;
+}
+.sales-info-2{
+  background-image: url(images/products/product-ui/bg-product-2.jpg);  
+}
+.sales-2 img {
+border-color: #8b9ce1;
+}
+.sales-info-3{
+  background-image: url(images/products/product-ui/bg-product-3.jpg);  
+}
+.sales-3 img {
+border-color: #c989df;
+}
+.sales-info-4{
+  background-image: url(images/products/product-ui/bg-product-4.jpg);  
+}
+.sales-4 img {
+border-color: #df8aa7;
+}
+.sales-info-5{
+  background-image: url(images/products/product-ui/bg-product-5.jpg);  
+}
+.sales-5 img {
+border-color: #b588db;
+}
+.sales-info-6{
+  background-image: url(images/products/product-ui/bg-product-6.jpg);  
+}
+.sales-6 img {
+border-color: #88dbd1;
+}
+.sales-info-7{
+  background-image: url(images/products/product-ui/bg-product-7.jpg);  
+}
+.sales-7 img {
+border-color: #bde08c;
+}
+.sales-info-8{
+  background-image: url(images/products/product-ui/bg-product-8.jpg);  
+}
+.sales-8 img {
+border-color: #d9db87;
+}
+.sales-info-9{
+  background-image: url(images/products/product-ui/bg-product-9.jpg);  
+}
+.sales-9 img {
+border-color: #a2e0ad;
+}
+.sales-info-10{
+  background-image: url(images/products/product-ui/bg-product-10.jpg);  
+}
+.sales-10 img {
+border-color: #ddbea1;
+}
+.sales-info-11{
+  background-image: url(images/products/product-ui/bg-product-11.jpg);  
+}
+.sales-11 img {
+border-color: #dabfe0;
+}
+.sales-info-12{
+  background-image: url(images/products/product-ui/bg-product-12.jpg);  
+}
+.sales-12 img {
+border-color: #a3ded8
+}
+.wrapper-prod {
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+.wrapper-prod button{
+  margin: 0px 5px 40px 5px;
+  padding: 5px;
+    width: 110px; 
+    background-image: url(images/icons/button.png);
+    font-size: 16px;
+}
+
+    .prod-sub{        
+        margin: 1px 1px;
+    }
+    .prod-sub h1{
+        text-align: center;
+        font-size: 35px;
+        margin-top: 110px;
+    }
+    .prod-sub div{
+        margin: 0px 0px; 
+        padding: 1px;
+        background-color: #3ba0cc;
+        text-align: center;
+    }
+    .prod-sub div h4{
+        font-size: 15px;
+    }
+    #active-category{
+        background-color: green;
+        font-color:white;
+    }
+    #active-category >h4 {
+        color: white;
+    }
+    .product-category a:link{
+        color: white;
+    }
+/*End of Product.php sheet styling*/
+/*Product.php sheet styling*/
+.our-products div{
+  margin-bottom: 15px;
+}
+.our-products h1{
+   color: #3a9cc8;
+  text-align: center;
+  margin: 100px 0px 50px 0px;
+}
+.sales{
+  height: 390px;
+  width: auto;
+  margin:20px 0px 10px 0px;
+}
+.sales img{
+  height: 250px;
+  width: auto;
+  border: 2px solid;
+  margin-bottom: 1px;
+  padding: 15px 15px;
+}
+.sales div{
+  padding: 5px 5px;
+  margin-top: 0px;
+  height: 90px;
+  width: auto;
+
+}
+.sales h3{
+  font-size: 15px;
+  padding-top: 0px;
+  color: white;
+}
+.sales h4{
+  font-size: 15px;
+}
+.sales div h3 {
+  padding: 5px 0px 5px 0px;
+  width: auto;
+  height: 10px;
+}
+.sales-info-1{
+  background-image: url(images/products/product-ui/bg-product-1.jpg);  
+}
+.sales-1 img {
+border-color: #dda17d;
+}
+.sales-info-2{
+  background-image: url(images/products/product-ui/bg-product-2.jpg);  
+}
+.sales-2 img {
+border-color: #8b9ce1;
+}
+.sales-info-3{
+  background-image: url(images/products/product-ui/bg-product-3.jpg);  
+}
+.sales-3 img {
+border-color: #c989df;
+}
+.sales-info-4{
+  background-image: url(images/products/product-ui/bg-product-4.jpg);  
+}
+.sales-4 img {
+border-color: #df8aa7;
+}
+.sales-info-5{
+  background-image: url(images/products/product-ui/bg-product-5.jpg);  
+}
+.sales-5 img {
+border-color: #b588db;
+}
+.sales-info-6{
+  background-image: url(images/products/product-ui/bg-product-6.jpg);  
+}
+.sales-6 img {
+border-color: #88dbd1;
+}
+.sales-info-7{
+  background-image: url(images/products/product-ui/bg-product-7.jpg);  
+}
+.sales-7 img {
+border-color: #bde08c;
+}
+.sales-info-8{
+  background-image: url(images/products/product-ui/bg-product-8.jpg);  
+}
+.sales-8 img {
+border-color: #d9db87;
+}
+.sales-info-9{
+  background-image: url(images/products/product-ui/bg-product-9.jpg);  
+}
+.sales-9 img {
+border-color: #a2e0ad;
+}
+.sales-info-10{
+  background-image: url(images/products/product-ui/bg-product-10.jpg);  
+}
+.sales-10 img {
+border-color: #ddbea1;
+}
+.sales-info-11{
+  background-image: url(images/products/product-ui/bg-product-11.jpg);  
+}
+.sales-11 img {
+border-color: #dabfe0;
+}
+.sales-info-12{
+  background-image: url(images/products/product-ui/bg-product-12.jpg);  
+}
+.sales-12 img {
+border-color: #a3ded8
+}
+.wrapper-prod {
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+.wrapper-prod button{
+  margin: 0px 5px 40px 5px;
+  padding: 5px;
+    width: 110px; 
+    background-image: url(images/icons/button.png);
+    font-size: 16px;
+}
+/*End of Product.php sheet styling*/
+
+/*Product Information Styling*/
+.product-name {
+  text-align: center;
+  margin: 100px 0px 50px 0px;
+}
+.product-name button{
+  height: 95px;
+  width: auto;
+  background-image: url(images/icons/button.png);
+  color: white;
+  font-size: 20px;
+} 
+.product-name button h3{
+  margin: 5px 25px;
+  /*padding: 10px 25px;*/
+  color: white;
+  font-size: 20px;
+}
+.descrip{
+  width: auto;
+  height: 50px;
+}
+.descrip h3{
+  text-align: center;
+  color: white;
+  padding: 15px 10px;
+}
+.descrip-text p{
+  border: 1px solid;
+  line-height: 2em;
+  padding: 10px 15px;
+  text-align: justify;
+
+}
+.descrip-tex-1 p{
+  border-color: #8b9ce1;
+}
+.descrip-tex-2 p{
+  border-color: #c989df;
+}
+.descrip-tex-3 p{
+  border-color: #dc87a4;
+}
+.descrip-tex-4 p{
+  border-color: #a0deab;
+}
+.shop-btn{
+text-align: center;
+margin: 20px 10px;
+}
+.shop-btn button{
+  height: auto;
+  width: auto;
+  padding: 10px 10px;
+  background-image: url(images/icons/button.png);
+  color: white;
+}
+/*End of Product Information Styling*/
+
+/*About Us section*/
+.about-us{
+  margin: 70px 65px 50px;
+  line-height: 2em;
+}
+.about-us-head {
+  text-align: center;
+}
+.about-us-head button{
+  padding: 5px 60px;
+  width: auto; 
+  background-image: url(images/icons/button.png);
+  font-size: 16px;
+  margin-top: 50px;
+}
+.about-us div p{
+  text-align: justify;
+  padding: 15px 25px;
+  border: 1px solid;
+  border-color: blue;
+}
+/*End of About Us section*/
