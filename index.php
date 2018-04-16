@@ -1,6 +1,7 @@
-<?php include 'head.php';
+<?php 
+include 'head.php';
 
-	include 'g-admin/config.php';
+include 'g-admin/config.php';
 
 ?>
 

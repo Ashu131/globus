@@ -1,40 +1,20 @@
-<!-- banner -->
-	<div id="home" class="w3ls-banner"> 
-		<!--Slider-->
-			<div class="w3l_banner_info">
-				<div class="col-md-12 slider-navbar">
-					<div class="callbacks_container">
-						<ul class="rslides" id="slider3">
-							<li>
-								<div class="slider_banner_info">
-									<img src="images/medical-bg2.jpg" alt="" class="img-responsive">
-								</div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+		<div class="item active">
+			<img src="images/slider/fssai.jpg" alt="Los Angeles" style="width:100%;">
+		</div>
 
-							</li>
-							<li>
-								<div class="slider_banner_info">
-									<img src="images/slider/fssai.jpg" alt="" class="img-responsive">
-								</div>
+		<div class="item">
+			<img src="images/medical-bg2.jpg" alt="Chicago" style="width:100%;">
+		</div>
+		
+		<div class="item">
+			<img src="images/slider/gmp 2.jpg" alt="New york" style="width:100%;">
+		</div>
 
-							</li>
-							<li>
-								<div class="slider_banner_info">
-									<img src="images/slider/gmp 2.jpg" alt="" class="img-responsive">
-								</div>
-
-							</li>
-							<li>
-								<div class="slider_banner_info">
-									<img src="images/slider/iso certificate.jpg" alt="" class="img-responsive">
-								</div>
-
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		<!--//Slider-->
-	</div>	
-	<div class="clearfix"></div>
-<!-- //banner --> 
+		<div class="item">
+			<img src="images/slider/iso certificate.jpg" alt="New york" style="width:100%;">
+		</div>
+    </div>
+</div>
