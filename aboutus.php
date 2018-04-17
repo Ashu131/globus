@@ -38,7 +38,7 @@ include 'navbar.php';
 	</div>
 </div>
 <?php
-include 'footer.php';
+//include 'footer.php';
 include 'script.php';
 ?>
 </body>

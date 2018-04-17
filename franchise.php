@@ -137,7 +137,7 @@ include 'navbar.php';
 </div>
 
 <?php
-include 'footer.php';
+// include 'footer.php';
 include 'script.php';
 ?>
 </body>

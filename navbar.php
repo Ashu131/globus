@@ -32,8 +32,8 @@
 			<div class="col-sm-2 text-center navpad" id="navabout"><a href="aboutus.php" class="white">About Us</a></div>
 			<div class="col-sm-2 text-center navpad" id="navblog"><a href="blog" class="white">Blogs</a></div>
 			<div class="col-sm-2 text-center navpad" id="navproduct"><a data-toggle="tab" href="#products" class="white">Products</a></div>
-			<div class="col-sm-2 text-center navpad" id="navcontact"><a href="#contact" class="white">Contact</a></div>
-			<div class="col-sm-2 text-center navpad" id="navtestimonials"><a href="#testimonials" class="white">Testimonials</a></div>
+			<div class="col-sm-2 text-center navpad" id="navcontact"><a href="index.php#contact" class="white">Contact</a></div>
+			<div class="col-sm-2 text-center navpad" id="navtestimonials"><a href="index.php#testimonials" class="white">Testimonials</a></div>
 			<div class="col-sm-2 text-center navpad" id="navtestimonials"><a href="manufacturing.php" class="white">Manufacturing</a></div>
 			<div class="col-sm-2 text-center navpad" id="navtestimonials"><a href="franchise.php" class="white">Franchise</a></div>
 			
@@ -85,7 +85,6 @@
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub014" class="subcat_color">Hair Care</a></div>
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub015" class="subcat_color">Body Care</a></div>
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub016" class="subcat_color">Personal &#38; Intimate Care</a></div>
-					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub017" class="subcat_color">Analgesic / Ati-Inflammatory</a></div>
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub018" class="subcat_color">Analgesic / Anti-Inflannatory</a></div>
 					
 				</div>

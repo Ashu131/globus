@@ -71,7 +71,7 @@ html[xmlns] .slides {display: block;}
 }
 .flex-direction-nav .flex-prev {
 	left: 9.2%;
-    bottom: 44%;
+    bottom: 23%;
 }
 .flexslider:hover .flex-next {opacity: 0.8;}
 .flexslider:hover .flex-prev {opacity: 0.8;}
