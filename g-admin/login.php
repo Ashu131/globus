@@ -14,7 +14,7 @@ $errorEmail=''; $errorPassword='';
         $email= $_POST['useremail'];
         $password= $_POST['pwd'];
 
-        $query="SELECT * FROM admin WHERE email='".$email."'";
+        $query="SELECT * FROM admin WHERE user='".$email."'";
         $run= mysqli_query($connect, $query);
             if (mysqli_num_rows($run)>0) {
                   $result=mysqli_fetch_array($run);
@@ -30,22 +30,6 @@ $errorEmail=''; $errorPassword='';
               $errorEmail='Incorrect Email';
             }
     }
-    
-
-  // if (isset($_POST['login'])) {
-  //   $name = $_POST['username'];
-  //   $pwd  = $_POST['pwd'];
-
-  //   $loginqry="SELECT user,password FROM admin WHERE user='$name' AND password='$pwd'";
-  //   $loginrun= mysqli_query($connect, $loginqry);
-  //   $loginresult= mysqli_fetch_assoc($loginrun);
-    
-  //   if (mysqli_num_rows($loginrun)>0) {
-  //     $_SESSION['globus-admin'] = $loginresult['user'];
-  //       header('location:index.php');
-  //   }
-  // }
-
 ?>
 
 <!DOCTYPE html>

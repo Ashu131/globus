@@ -44,7 +44,6 @@ session_start();
         </li>
         <li class="breadcrumb-item active">My Dashboard</li>
       </ol>
-      
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
@@ -62,35 +61,44 @@ session_start();
                   <th>Uses</th>
                   <th>Category</th>
                   <th>Sub Category</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
-             <!--  <tfoot>
-                <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
-                </tr>
-              </tfoot> -->
               <tbody>
-                <?php 
-  $dataqry="SELECT *, category.cat_name, sub_category.subcat_name FROM $product_tbl JOIN $cat_tbl ON $product_tbl.cat_code=$cat_tbl.cat_code JOIN $subcat_tbl ON $product_tbl.subcat_code=$subcat_tbl.subcat_code";
+<?php
+  // $dataqry="SELECT *, category.cat_name, sub_category.subcat_name FROM products JOIN category ON $product_tbl.cat_code=$cat_tbl.cat_code JOIN $subcat_tbl ON $product_tbl.subcat_code=$subcat_tbl.subcat_code";
+  $dataqry="SELECT * FROM products ORDER BY ID ASC";
   $datarun= mysqli_query($connect,$dataqry);
-while ( $dataresult= mysqli_fetch_assoc($datarun)) {
-  echo "<tr><td>".$dataresult['product_name']."</td>";
+while ( $dataresult= mysqli_fetch_array($datarun)) {
+/**=================================================
+ * Query for edit Product data STARTS HERE
+ * =================================================
+ */
+  // Query for Category and Subcategory Name
+  $queryForCategory="SELECT cat_name FROM category WHERE cat_code='".$dataresult['cat_code']."'";
+  $categoryName=mysqli_fetch_assoc(mysqli_query($connect,$queryForCategory));
+
+  $queryForSubcategory="SELECT subcat_name FROM sub_category WHERE subcat_code='".$dataresult['subcat_code']."'";
+  $subcategoryName=mysqli_fetch_assoc(mysqli_query($connect,$queryForSubcategory));
+
+/**=================================================
+ * Query for edit Product data ENDS HERE
+ * =================================================
+ */
+
+  echo "<tr><td><a href='edit_product.php?id=".$dataresult['id']."'>".$dataresult['product_name']."</a></td>";
   echo "<td>".$dataresult['brand']."</td>";
   echo "<td>".$dataresult['mrp']."</td>";
   echo "<td>".$dataresult['product_desc']."</td>";
   echo "<td>".$dataresult['pointers']."</td>";
   echo "<td>".$dataresult['product_use']."</td>";
-  echo "<td>".$dataresult['cat_name']."</td>";
-  echo "<td>".$dataresult['subcat_name']."</td>";
+  echo "<td>".$categoryName['cat_name']."</td>";
+  echo "<td>".$subcategoryName['subcat_name']."</td>";
+  echo "<td><a href='delete_product.php?id=".$dataresult["id"]."'>".$dataresult['id']."</a></td>";  
   echo "</tr>";
 }
 
- ?>
+?>
                 
               </tbody>
             </table>
