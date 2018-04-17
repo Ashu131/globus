@@ -8,7 +8,7 @@
 				<div class="left-top">
 					<h4>Contact information</h4>
 					<p><i class="fa fa-calendar" aria-hidden="true"></i><strong>Monday - Friday <span class="dot">:</span></strong>9:30 AM to 6:30 PM</p>
-					<p><i class="fa fa-map-marker" aria-hidden="true"></i><strong class="p">address <span class="dot1">:</span></strong>14/11, Site-4, Industrial Area<span class="pull-right">Sahibabad, Ghaziabad (U.P.) 201010<span></p>
+					<p><i class="fa fa-map-marker" aria-hidden="true"></i><strong class="p">address <span class="dot1">:</span></strong>14/11/2, Site-4, Industrial Area<span class="pull-right">Sahibabad, Ghaziabad (U.P.) 201010<span></p>
 					<div class="clearfix"></div>
 					<p><i class="fa fa-phone" aria-hidden="true"></i><strong class="p1">phone <span class="dot2">:</span></strong>+91-120-4217614-17</p>
 					<p><i class="fa fa-envelope" aria-hidden="true"></i><strong class="p2">email <span class="dot3">:</span></strong><a href="mailto:info@example.com">mkt.globus@gmail.com</a></p>

@@ -2546,7 +2546,7 @@ ul.resp-tabs-list {
 	}
 	.flex-direction-nav .flex-prev {
 		left: 0%;
-		bottom: 20%;
+		bottom: -2%;
 	}
     .w3ls-heading {
     margin-top: 12rem;

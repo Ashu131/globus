@@ -33,25 +33,35 @@ margin: 0.5em auto;
 	<div class="row">
 		<div class="col-md-4 service1 text-center">
 			<img src="images/c00.jpg" class="img-responsive" alt="">
-			<h3 class="caption">Pharmaceuticals</h3>			
+			<a href="products.php?subcat_code=sub019">
+				<h3 class="caption">PHARMACEUTICALS</h3>
+			</a>
 		</div>
 		<div class="col-md-4 service1 text-center">
 			<img src="images/c01.jpg" class="img-responsive" alt="">
-			<h3 class="caption">AYURVEDIC & HERBALS</h3>			
+			<a href="products.php?subcat_code=sub008">
+				<h3 class="caption">AYURVEDIC &amp; HERBALS</h3>
+			</a>
 		</div>
 		<div class="col-md-4 service1 text-center">
 			<img src="images/c02.jpg" class="img-responsive" alt="">
-			<h3 class="caption">PERSONAL CARE & HYGIENE</h3>			
+			<a href="products.php?subcat_code=sub016">
+				<h3 class="caption">PERSONAL CARE &amp; HYGIENE</h3>
+			</a>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-6 service1 text-center">
 			<img src="images/veterian.jpg" class="img-responsive" alt="">
-			<h3 class="caption">VETERINARY (ANIMAL HEALTH & NUTRITION)</h3>			
+			<a href="products.php?subcat_code=sub007">
+				<h3 class="caption">VETERINARY (ANIMAL HEALTH &amp; NUTRITION)</h3>
+			</a>
 		</div>
 		<div class="col-md-6 service1 text-center">
 			<img src="images/c04.jpg" class="img-responsive" alt="">
-			<h3 id="testimonials" class="caption">BEAUTY & SKIN CARE</h3>			
+			<a href="products.php?subcat_code=sub013">
+				<h3 id="testimonials" class="caption">BEAUTY &amp; SKIN CARE</h3>
+			</a>
 		</div>
 	</div>
 </div>
