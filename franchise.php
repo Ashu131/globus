@@ -39,7 +39,9 @@
  */
     $to_email_address='mkt.globus@gmail.com';
     $subject="New Franchise Request";
-    $headers='From:'.$email;
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers.='From:'.$email."\r\n";
     $message="
 <html>
 <head>
@@ -74,10 +76,11 @@
 </body>
 </html>
 ";
-    $message = wordwrap($message, 70, "\r\n");
-
-    $mail=mail($to_email_address,$subject,$message,[$headers]);
-
+    
+    $mail=mail($to_email_address,$subject,$message,$headers);
+if ($mail) {
+    echo "<script>alert('Your Request Submitted');</script>";
+}
     }
 ?>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">

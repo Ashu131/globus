@@ -24,7 +24,6 @@
 							<li><a href="https://www.linkedin.com/in/globusremedies/" target="_blnak"><i class="fa fa-linkedin"></i></a></li>
 						</ul>
 					</div>
-
 				</div>
 			</div>
 			<div class="col-md-6 contact-right">
@@ -33,7 +32,7 @@
 			<div class="clearfix"></div>
 		</div>
 			<div class="contact-w3ls">
-<form method="post" enctype="multipart/form-data">
+				<form method="post" enctype="multipart/form-data">
 				
 					<div class="col-md-7 col-sm-7 contact-left agileits-w3layouts">
 						<input type="text" name="name" placeholder="Name" required="">

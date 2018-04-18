@@ -19,9 +19,9 @@ include 'testimonials.php';
 
 include 'home_blogs.php';
 
-include 'contact.php';
+// include 'contact.php';
 
-// include 'footer.php';
+include 'footer.php';
 
 include 'script.php';
 

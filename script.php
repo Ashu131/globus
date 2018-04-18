@@ -1,5 +1,5 @@
 <script src="js/easy-responsive-tabs.js"></script>
-
+<link rel="stylesheet" href="css/footer.css">
 <script>
 
 $(document).ready(function () {
