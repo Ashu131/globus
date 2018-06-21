@@ -61,11 +61,10 @@
 				<div class="row subcat_background">
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub001" class="subcat_color">Antibiotic</a></div>
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub002" class="subcat_color">Gastraintestinal</a></div>
-					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub003" class="subcat_color">Analgesic / Anti-Inflammatory</a></div>
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub004" class="subcat_color">Anticold / Anticough</a></div>
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub005" class="subcat_color">Speciality Division</a></div>
-					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub006" class="subcat_color">Gynecology</a></div>
-					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub007" class="subcat_color">Others</a></div>
+					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub007" class="subcat_color">Gynecology</a></div>
+					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub006" class="subcat_color">Others</a></div>
 				</div>
 			</div>
 			
@@ -84,8 +83,7 @@
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub013" class="subcat_color">Face Care</a></div>
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub014" class="subcat_color">Hair Care</a></div>
 					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub015" class="subcat_color">Body Care</a></div>
-					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub016" class="subcat_color">Personal &#38; Intimate Care</a></div>
-					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub018" class="subcat_color">Analgesic / Anti-Inflannatory</a></div>
+					<div class="col-sm-2 text-center navpad"><a href="products.php?subcat_code=sub016" class="subcat_color">Personal &amp; Intimate Care</a></div>
 					
 				</div>
 			</div>

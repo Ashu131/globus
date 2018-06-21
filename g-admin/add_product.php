@@ -10,19 +10,17 @@
     echo $e;
   }
 
-
+$message='';
   if (isset($_POST['submit'])) {
-    $product_name   = $_POST['name'];
+    $product        = $_POST['name'];
     $brand          = $_POST['brand'];
     $mrp            = $_POST['mrp'];
     $desc           = $_POST['desc'];
-    $pointers       = $_POST['pointers'];
+    $pointer        = $_POST['pointers'];
     $use            = $_POST['use'];
-    $catcode        = $_POST['cat_code'];
+    $cat            = $_POST['cat_code'];
     $subcat         = $_POST['subcat'];
     $link           = $_POST['link'];
-
-
 
    if(isset($_FILES['image1'])){
       $errors= array();
@@ -30,17 +28,17 @@
       $file_size =$_FILES['image1']['size'];
       $file_tmp =$_FILES['image1']['tmp_name'];
       $file_type=$_FILES['image1']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['image1']['name'])));
+      // $file_ext=strtolower(end(explode('.',$_FILES['image1']['name'])));
       
-      $expensions= array("jpeg","jpg","png");
+      // $expensions= array("jpeg","jpg","png");
       
       // if(in_array($file_ext,$expensions)=== false){
       //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
       // }
       
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
+      // if($file_size > 2997152){
+      //    $errors[]='File size must be excately 2 MB';
+      // }
       
       if(empty($errors)==true){
          move_uploaded_file($file_tmp,"images/".$file_name1);
@@ -54,17 +52,17 @@
       $file_size =$_FILES['image2']['size'];
       $file_tmp =$_FILES['image2']['tmp_name'];
       $file_type=$_FILES['image2']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['image2']['name'])));
+      // $file_ext=strtolower(end(explode('.',$_FILES['image2']['name'])));
       
-      $expensions= array("jpeg","jpg","png");
+      // $expensions= array("jpeg","jpg","png");
       
       // if(in_array($file_ext,$expensions)=== false){
       //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
       // }
       
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
+      // if($file_size > 2997152){
+      //    $errors[]='File size must be excately 2 MB';
+      // }
       
       if(empty($errors)==true){
          move_uploaded_file($file_tmp,"images/".$file_name2);
@@ -78,17 +76,17 @@
       $file_size =$_FILES['image3']['size'];
       $file_tmp =$_FILES['image3']['tmp_name'];
       $file_type=$_FILES['image3']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['image3']['name'])));
+      // $file_ext=strtolower(end(explode('.',$_FILES['image3']['name'])));
       
-      $expensions= array("jpeg","jpg","png");
+      // $expensions= array("jpeg","jpg","png");
       
       // if(in_array($file_ext,$expensions)=== false){
       //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
       // }
       
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
+      // if($file_size > 2997152){
+      //    $errors[]='File size must be excately 2 MB';
+      // }
       
       if(empty($errors)==true){
          move_uploaded_file($file_tmp,"images/".$file_name3);
@@ -102,17 +100,17 @@
       $file_size =$_FILES['image4']['size'];
       $file_tmp =$_FILES['image4']['tmp_name'];
       $file_type=$_FILES['image4']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['image4']['name'])));
+      // $file_ext=strtolower(end(explode('.',$_FILES['image4']['name'])));
       
-      $expensions= array("jpeg","jpg","png");
+      // $expensions= array("jpeg","jpg","png");
       
       // if(in_array($file_ext,$expensions)=== false){
       //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
       // }
       
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
+      // if($file_size > 2997152){
+      //    $errors[]='File size must be excately 2 MB';
+      // }
       
       if(empty($errors)==true){
          move_uploaded_file($file_tmp,"images/".$file_name4);
@@ -126,17 +124,17 @@
       $file_size =$_FILES['image5']['size'];
       $file_tmp =$_FILES['image5']['tmp_name'];
       $file_type=$_FILES['image5']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['image5']['name'])));
+      // $file_ext=strtolower(end(explode('.',$_FILES['image5']['name'])));
       
-      $expensions= array("jpeg","jpg","png");
+      // $expensions= array("jpeg","jpg","png");
       
       // if(in_array($file_ext,$expensions)=== false){
       //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
       // }
       
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
+      // if($file_size > 2997152){
+      //    $errors[]='File size must be excately 2 MB';
+      // }
       
       if(empty($errors)==true){
          move_uploaded_file($file_tmp,"images/".$file_name5);
@@ -145,14 +143,19 @@
       }
    }
 
-  $addqry="INSERT into products(product_name, brand, mrp, product_desc, pointers, product_use, cat_code, subcat_code, url, image1, image2, image3, image4, image5) 
-  VALUES('$product_name','$brand', '$mrp', '$desc','$pointers', '$use', '$catcode', '$subcat', '$link', '$file_name1', '$file_name2', '$file_name3', '$file_name4', '$file_name5')";
-  $addrun= mysqli_query($connect, $addqry);
-  if ($addrun) {
-    echo "Record Inserted";
-  }else{
-    echo "Record not Inserted";
-  }
+#INSERT DATA PDO STATEMENT
+  $sql='INSERT into products(product_name, brand, mrp, product_desc, pointers, product_use, cat_code, subcat_code, url, image1, image2, image3, image4, image5)
+        VALUES(:product,:brand,:mrp,:pdesc,:pointer,:use,:cat,:subcat,:url,:image1,:image2,:image3,:image4,:image5)';
+  $stmt=$pdo->prepare($sql);
+  $stmt->bindValue(':image5', null, PDO::PARAM_INT);
+  $stmt->execute(['product'=>$product, 'brand'=>$brand, 'mrp'=>$mrp, 'pdesc'=>$desc, 'pointer'=>$pointer,
+                 'use'=>$use, 'cat'=>$cat, 'subcat'=>$subcat, 'url'=>$link, 'image1'=>$file_name1,
+                 'image2'=>$file_name2, 'image3'=>$file_name3, 'image5'=>$file_name5, 'image4'=>$file_name4]);
+    if ($stmt) {
+      $message= "Record Inserted";
+    }else{
+      $message= "Record not Inserted";
+    }
   }
  ?>
 
@@ -172,6 +175,9 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+  <!-- Tiny Mce -->
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -189,6 +195,7 @@
       
     </div>
     <div class="container">
+      <div class="success"><?php echo $message; ?></div>
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">Add Product</div>
       <div class="card-body">
@@ -200,8 +207,8 @@
             <div class="form-row">
               
                 <label for="category">Category</label>
-                <select class="form-control" name="cat_select" onchange="this.form.submit()">
-                  <option>Select</option>
+                <select class="form-control" name="cat_select" onchange="this.form.submit()" required="required">
+                  <option value="">Select</option>
                   <?php 
                     $catqry= "SELECT * FROM category";
             $run= mysqli_query($connect, $catqry);
@@ -227,9 +234,9 @@
           <input type="hidden" name="cat_code" value="<?php echo $_GET['cat_select']; ?>">
           
           <div class="form-group">
-                <label for="exampleInputLastName">Sub Category</label>
-                <select class="form-control" name="subcat">
-                  <option>Select</option>
+            <label for="SubCategory">Sub Category</label>
+            <select class="form-control" name="subcat" required="required">
+              <option value="">Select</option>
         <?php 
 
           $query="SELECT subcat_name, subcat_code FROM sub_category WHERE cat_code = '".$_GET['cat_select']."' ";
@@ -240,24 +247,24 @@
 
          ?>
                    
-                </select>
-              </div>
+            </select>
+          </div>
               
           <!-- Product Name -->
           <div class="form-group">
             <label for="Product Name">Product Name</label>
-            <input class="form-control" type="text" name="name" placeholder="Enter Product Name">
+            <input class="form-control" type="text" name="name" placeholder="Enter Product Name" required="required">
           </div>
           <!-- Product Brand and MRP -->
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
                 <label for="Brand Name">Brand Name</label>
-                <input class="form-control" type="text" name="brand" placeholder="Enter Brand Name">
+                <input class="form-control" type="text" name="brand" placeholder="Enter Brand Name" required="required">
               </div>
               <div class="col-md-6">
                 <label for="MRP">MRP</label>
-                <input class="form-control" type="number" name="mrp" placeholder="Enter MRP">
+                <input class="form-control" type="number" name="mrp" placeholder="Enter MRP" required="required">
               </div>
             </div>
           </div>
@@ -269,7 +276,8 @@
 
            <div class="form-group">
             <label for="Pointers">Pointers</label>
-            <input class="form-control" type="text" name="pointers" placeholder="Enter Product Pointers">
+            <textarea name="pointers" id="" cols="30" rows="10" class="form-control" placeholder="Enter Product Pointers"></textarea>
+            
           </div>
 
            <div class="form-group">

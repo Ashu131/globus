@@ -1,5 +1,6 @@
 <?php 
   session_start();
+  error_reporting(E_ALL);
   include 'config.php';
   try {
     if (!isset($_SESSION['globus-admin'])) {
@@ -11,181 +12,7 @@
     echo $e;
   }
 
-/**----------------------------------------------------------
- * Product Update Query
- * Image Update script      START HERE
- * ----------------------------------------------------------
- */
 $resultOfUpdate='';
-  if (isset($_POST['update'])) {
-    $product_name   = $_POST['product_name'];
-    $brand          = $_POST['brand'];
-    $mrp            = $_POST['mrp'];
-    $desc           = $_POST['product_desc'];
-    $pointers       = $_POST['pointers'];
-    $use            = $_POST['product_use'];
-    $catcode        = $_POST['cat_code'];
-    $subcat         = $_POST['subcat'];
-    $link           = $_POST['url'];
-    $id             = $_POST['product_id'];
-$file_name1=$file_name2=$file_name3=$file_name4=$file_name5='';
-   if(isset($_FILES['image1'])){
-      $errors= array();
-      $file_name1 = $_FILES['image1']['name'];
-      $file_size =$_FILES['image1']['size'];
-      $file_tmp =$_FILES['image1']['tmp_name'];
-      // $file_type=$_FILES['image1']['type'];
-      // $file_ext=strtolower(end(explode('.',$file_name1)));
-      
-      $expensions= array("jpeg","jpg","png");
-      
-      // if(in_array($file_ext,$expensions)=== false){
-      //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-      // }
-      
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
-      
-      if(empty($errors)==true){
-         move_uploaded_file($file_tmp,"images/".$file_name1);
-      }else{
-         print_r($errors);
-      }
-   }
-   if(isset($_FILES['image2'])){
-      $errors= array();
-      $file_name2 = $_FILES['image2']['name'];
-      $file_size =$_FILES['image2']['size'];
-      $file_tmp =$_FILES['image2']['tmp_name'];
-      // $file_type=$_FILES['image2']['type'];
-      // $file_ext=strtolower(end(explode('.',$_FILES['image2']['name'])));
-      
-      $expensions= array("jpeg","jpg","png");
-      
-      // if(in_array($file_ext,$expensions)=== false){
-      //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-      // }
-      
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
-      
-      if(empty($errors)==true){
-         move_uploaded_file($file_tmp,"images/".$file_name2);
-      }else{
-         print_r($errors);
-      }
-   }
-   if(isset($_FILES['image3'])){
-      $errors= array();
-      $file_name3 = $_FILES['image3']['name'];
-      $file_size =$_FILES['image3']['size'];
-      $file_tmp =$_FILES['image3']['tmp_name'];
-      // $file_type=$_FILES['image3']['type'];
-      // $file_ext=strtolower(end(explode('.',$_FILES['image3']['name'])));
-      
-      $expensions= array("jpeg","jpg","png");
-      
-      // if(in_array($file_ext,$expensions)=== false){
-      //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-      // }
-      
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
-      
-      if(empty($errors)==true){
-         move_uploaded_file($file_tmp,"images/".$file_name3);
-      }else{
-         print_r($errors);
-      }
-   }
-   if(isset($_FILES['image4'])){
-      $errors= array();
-      $file_name4 = $_FILES['image4']['name'];
-      $file_size =$_FILES['image4']['size'];
-      $file_tmp =$_FILES['image4']['tmp_name'];
-      // $file_type=$_FILES['image4']['type'];
-      // $file_ext=strtolower(end(explode('.',$_FILES['image4']['name'])));
-      
-      $expensions= array("jpeg","jpg","png");
-      
-      // if(in_array($file_ext,$expensions)=== false){
-      //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-      // }
-      
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
-      
-      if(empty($errors)==true){
-         move_uploaded_file($file_tmp,"images/".$file_name4);
-      }else{
-         print_r($errors);
-      }
-   }
-   if(isset($_FILES['image5'])){
-      $errors= array();
-      $file_name5 = $_FILES['image5']['name'];
-      $file_size =$_FILES['image5']['size'];
-      $file_tmp =$_FILES['image5']['tmp_name'];
-      // $file_type=$_FILES['image5']['type'];
-      // $file_ext=strtolower(end(explode('.',$_FILES['image5']['name'])));
-      
-      $expensions= array("jpeg","jpg","png");
-      
-      // if(in_array($file_ext,$expensions)=== false){
-      //    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-      // }
-      
-      if($file_size > 2997152){
-         $errors[]='File size must be excately 2 MB';
-      }
-      
-      if(empty($errors)==true){
-         move_uploaded_file($file_tmp,"images/".$file_name5);
-      }else{
-         print_r($errors);
-      }
-   }
-
-  $addqry="INSERT into products(product_name, brand, mrp, product_desc, pointers, product_use, cat_code, subcat_code, url, image1, image2, image3, image4, image5) 
-  VALUES('$product_name','$brand', '$mrp', '$desc','$pointers', '$use', '$catcode', '$subcat', '$link', '$file_name1', '$file_name2', '$file_name3', '$file_name4', '$file_name5')";
-  $addqry="UPDATE products SET
-            product_name='$product_name',
-            brand       ='$brand',
-            mrp         ='$mrp',
-            product_desc='$desc',
-            pointers    ='$pointers',
-            product_use ='$use',
-            cat_code    ='$catcode',
-            subcat_code ='$subcat',
-            url         ='$link',
-            image1      ='$file_name1',
-            image2      ='$file_name2',
-            image3      ='$file_name3',
-            image4      ='$file_name4',
-            image5      ='$file_name5'
-
-WHERE id=$id";
-
-$addrun= mysqli_query($connect, $addqry);
-    if ($addrun) {
-    echo "<script>window.location='index.php'</script>";
-      
-      $resultOfUpdate= "Record Updated";
-    }else{
-      $resultOfUpdate= "Record not Updated";
-    } 
- 
-}
-
-/**----------------------------------------------------------
- * Product Update Query
- * Image Update script      END HERE
- * ----------------------------------------------------------
- */
  ?>
 
 <!DOCTYPE html>
@@ -203,6 +30,9 @@ $addrun= mysqli_query($connect, $addqry);
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
+    <!-- Tiny Mce -->
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -225,8 +55,8 @@ $addrun= mysqli_query($connect, $addqry);
  */
 $editProductQuery="SELECT * FROM products WHERE id=".$_GET['id'];
 $editProductRunQuery=mysqli_query($connect,$editProductQuery);
-$editProductQueryResult=mysqli_fetch_assoc($editProductRunQuery);
-$item=$editProductQueryResult;
+$item=$editProductQueryResult=mysqli_fetch_assoc($editProductRunQuery);
+
 
   // Query for Category and Subcategory Name
   $queryForCategory="SELECT cat_name FROM category WHERE cat_code='".$item['cat_code']."'";
@@ -245,36 +75,36 @@ $item=$editProductQueryResult;
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">Edit Product</div>
       <div class="card-body">
-        <!-- Categories -->
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+        <!-- Categories<?php //echo $_SERVER['PHP_SELF']; ?> -->
+        <form action="update_product.php" method="post" id="update_product_form">
         <input type="hidden" name="product_id" value="<?php echo $_GET['id']; ?>">
           <div class="form-group">
                 <label for="category">Category</label>
-                <select class="form-control" name="cat_code">
+                <select class="form-control" name="cat_code" required="required">
                     <option value="<?php echo $item['cat_code']; ?>"><?php echo $categoryName['cat_name']; ?></option>
                 </select>
           </div>
           <div class="form-group">
-                <label for="exampleInputLastName">Sub Category</label>
-                <select class="form-control" name="subcat">
-                    <option value="<?php echo $item['subcat_code']; ?>"><?php echo $subcategoryName['subcat_name']; ?></option>                  
-                </select>
-              </div>
+            <label for="exampleInputLastName">Sub Category</label>
+            <select class="form-control" name="subcat" required="required">
+                <option value="<?php echo $item['subcat_code']; ?>"><?php echo $subcategoryName['subcat_name']; ?></option>                  
+            </select>
+          </div>
           <!-- Product Name -->
           <div class="form-group">
             <label for="Product Name">Product Name</label>
-            <input class="form-control" type="text" name="product_name" placeholder="Enter Product Name" value="<?php echo $item['product_name']; ?>">
+            <input class="form-control" type="text" name="product_name" placeholder="Enter Product Name" value="<?php echo $item['product_name']; ?>" required="required">
           </div>
           <!-- Product Brand and MRP -->
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
                 <label for="Brand Name">Brand Name</label>
-                <input class="form-control" type="text" name="brand" placeholder="Enter Brand Name" value="<?php echo $item['brand']; ?>">
+                <input class="form-control" type="text" name="brand" placeholder="Enter Brand Name" value="<?php echo $item['brand']; ?>" required="required">
               </div>
               <div class="col-md-6">
                 <label for="MRP">MRP</label>
-                <input class="form-control" type="number" name="mrp" placeholder="Enter MRP" value="<?php echo $item['mrp']; ?>">
+                <input class="form-control" type="number" name="mrp" placeholder="Enter MRP" value="<?php echo $item['mrp']; ?>" required="required">
               </div>
             </div>
           </div>
@@ -286,7 +116,7 @@ $item=$editProductQueryResult;
 
            <div class="form-group">
             <label for="Pointers">Pointers</label>
-            <input class="form-control" type="text" name="pointers" placeholder="Enter Product Pointers" value="<?php echo $item['pointers']; ?>">
+            <textarea name="pointers" id="" cols="30" rows="10" class="form-control" placeholder="Enter Product Pointers"><?php echo $item['pointers']; ?></textarea>
           </div>
 
            <div class="form-group">
@@ -296,16 +126,6 @@ $item=$editProductQueryResult;
           <div class="form-group">
             <label for="url">Shop link</label>
             <input class="form-control" type="text" name="url" placeholder="Link to purchase the product" value="<?php echo $item['url']; ?>">
-          </div>
-
-          <div class="form-group">
-            <label for="Images">Images<span>(Please choose all images.)</span></label>
-            <input class="form-control" type="file" name="image1">
-            <input class="form-control" type="file" name="image2">
-            <input class="form-control" type="file" name="image3">
-            <input class="form-control" type="file" name="image4">
-            <input class="form-control" type="file" name="image5">
-            
           </div>
 
           <input type="submit" name="update" value="Update" class="btn btn-primary btn-block">
@@ -347,6 +167,9 @@ $item=$editProductQueryResult;
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.js"></script>
+    <script src="js/validate.js"></script>
   </div>
 </body>
 

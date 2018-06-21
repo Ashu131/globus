@@ -18,7 +18,13 @@
             <span class="nav-link-text">Add Product</span>
           </a>
         </li>
-        </ul>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Update Product Image">
+          <a class="nav-link" href="update_image_index.php">
+            <i class="fa fa-fw fa-check"></i>
+            <span class="nav-link-text">Update Images</span>
+          </a>
+        </li>
+      </ul>
       <!-- sidebar toggle -->
 
       <ul class="navbar-nav sidenav-toggler">

@@ -101,6 +101,14 @@ body.fixed-nav {
     max-width: none;
     text-overflow: ellipsis; }
 
+/*******Product Image Update*********/
+.product_update_img img{
+  width: 120px;
+  height: auto;
+}
+
+/*******Product Image Update*********/
+
 @media (min-width: 992px) {
   #mainNav .navbar-brand {
     width: 250px; }
@@ -194,7 +202,9 @@ body.sidenav-toggled #mainNav.fixed-top #sidenavToggler i {
 
 #mainNav.static-top .sidenav-toggler {
   display: none; }
-
+.table-responsive{
+  overflow-x:overlay;
+}
 @media (min-width: 992px) {
   #mainNav.static-top .sidenav-toggler {
     display: flex; } }

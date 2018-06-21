@@ -11,7 +11,7 @@ session_start();
   }
 $deleteQuery="DELETE FROM products WHERE id=".$_GET['id'];
 $deleteRun=mysqli_query($connect,$deleteQuery);
-echo $deleteQuery;
+// echo $deleteQuery;
 echo mysqli_error($connect);
 if ($deleteRun) {
     echo "<script>window.location='index.php?deleteResult=Record deleted'</script>";

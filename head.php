@@ -31,6 +31,16 @@
 <script src="js/bootstrap.js"></script>	<!-- //bootstrap-JavaScript-File -->
 <script type="text/javascript" src="dist/xzoom.min.js"></script>
 <link rel="stylesheet" type="text/css" href="dist/css/xzoom.css" media="all" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111821977-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111821977-1');
+</script>
+
 
 </head>
 <!-- Head -->

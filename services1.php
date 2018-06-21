@@ -45,7 +45,7 @@ margin: 0.5em auto;
 		</div>
 		<div class="col-md-4 service1 text-center">
 			<img src="images/c02.jpg" class="img-responsive" alt="">
-			<a href="products.php?subcat_code=sub016">
+			<a href="products.php?subcat_code=sub015">
 				<h3 class="caption">PERSONAL CARE &amp; HYGIENE</h3>
 			</a>
 		</div>
@@ -53,7 +53,7 @@ margin: 0.5em auto;
 	<div class="row">
 		<div class="col-md-6 service1 text-center">
 			<img src="images/veterian.jpg" class="img-responsive" alt="">
-			<a href="products.php?subcat_code=sub007">
+			<a href="products.php?subcat_code=sub006">
 				<h3 class="caption">VETERINARY (ANIMAL HEALTH &amp; NUTRITION)</h3>
 			</a>
 		</div>

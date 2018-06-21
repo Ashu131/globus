@@ -21,7 +21,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Globus Admin Panel</title>
+  <title>Globus Admin Panel | Update Product Image</title>
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -42,65 +42,93 @@ session_start();
         <li class="breadcrumb-item">
           Dashboard
         </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
+        <li class="breadcrumb-item active">Update Images</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Products Report | <span>Please click on Product Name to update the same product.</span> </div>
+          <i class="fa fa-table"></i> Products Images Report  |  <span> If the Image is above 2MB the system will not work. Use <a href="http://optimizilla.com/" target="_blank">Optimizilla</a> to reduce the size below 200KB.</span></div>
+          <p></p>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Brand &amp; MRP</th>
-                  <th>Description</th>
-                  <th>Pointers</th>
-                  <th>Uses</th>
-                  <th>Category &amp; Sub Category</th>
-                  <th>Show/Hide</th>
+                  <th>Image1</th>
+                  <th>Image2</th>
+                  <th>Image3</th>
+                  <th>Image4</th>
+                  <th>Image5</th>
                 </tr>
               </thead>
               <tbody>
 <?php
-  // $dataqry="SELECT *, category.cat_name, sub_category.subcat_name FROM products JOIN category ON $product_tbl.cat_code=$cat_tbl.cat_code JOIN $subcat_tbl ON $product_tbl.subcat_code=$subcat_tbl.subcat_code";
+  
+/**=================================================
+ * Query for Updating Images data STARTS HERE
+ * =================================================
+ */
+  
   $dataqry="SELECT * FROM products ORDER BY ID ASC";
   $datarun= mysqli_query($connect,$dataqry);
+
+/**=================================================
+ * Query for Updating Images data ENDS HERE
+ * =================================================
+ */
 while ( $dataresult= mysqli_fetch_array($datarun)) {
-/**=================================================
- * Query for edit Product data STARTS HERE
- * =================================================
- */
-  // Query for Category and Subcategory Name
-  $queryForCategory="SELECT cat_name FROM category WHERE cat_code='".$dataresult['cat_code']."'";
-  $categoryName=mysqli_fetch_assoc(mysqli_query($connect,$queryForCategory));
 
-  $queryForSubcategory="SELECT subcat_name FROM sub_category WHERE subcat_code='".$dataresult['subcat_code']."'";
-  $subcategoryName=mysqli_fetch_assoc(mysqli_query($connect,$queryForSubcategory));
+  echo "<tr class='product_update_img'><td><a href='edit_product.php?id=".$dataresult['id']."'>".$dataresult['product_name']."</a></td>";
 
-/**=================================================
- * Query for edit Product data ENDS HERE
- * =================================================
- */
-
-  echo "<tr><td><a target='_blank' href='edit_product.php?id=".$dataresult['id']."'>".$dataresult['product_name']."</a></td>";
-  echo "<td>".$dataresult['brand']."<br>".$dataresult['mrp']."</td>";
-  echo "<td>".substr($dataresult['product_desc'], 0,30)."....</td>";
-  echo "<td>".$dataresult['pointers']."....</td>";
-  echo "<td>".substr($dataresult['product_use'], 0,30)."....</td>";
-  echo "<td>".$categoryName['cat_name']."<br>".$subcategoryName['subcat_name']."</td>";
-  
-  ?>
+?>
   <td>
-    <a  class='btn <?php echo $dataresult["show-hide"] ? ' btn-primary disabled' : '' ?>' 
-        href='show_product.php?id=<?php echo $dataresult["id"]; ?>'>show
-    </a>
-    <a class='btn <?php echo $dataresult["show-hide"] ? '' : 'btn-danger disabled' ?>' 
-       href='hide_product.php?id=<?php echo $dataresult["id"]; ?>'>Hide
-    </a>
+    <img class='img-responsive' src='images/<?php echo $dataresult["image1"]; ?>'><br>
+    <?php echo $dataresult['image1']; ?>
+      <form action="update_image.php" method="POST" enctype="multipart/form-data" id="update_product_image1">
+        <input type='file' name='image1'>
+        <input type="hidden" name='product_id' value="<?php echo $dataresult['id']; ?>">
+        <input type='submit' class='btn btn-default' name="image1">
+      </form>
+  </td>
+  <td>
+    <img class='img-responsive' src='images/<?php echo $dataresult["image2"]; ?>'><br>
+      <?php echo $dataresult['image2']; ?>
+      <form action="update_image.php" method="POST" enctype="multipart/form-data" id="update_product_image">
+        <input type='file' name='image2'>
+        <input type="hidden" name='product_id' value="<?php echo $dataresult['id']; ?>">
+        <input type='submit' class='btn btn-default' name="image2">
+      </form>
+  </td>
+  <td>
+    <img class='img-responsive' src='images/<?php echo $dataresult["image3"]; ?>'><br>
+      <?php echo $dataresult['image3']; ?>
+      <form action="update_image.php" method="POST" enctype="multipart/form-data" id="update_product_image">
+        <input type='file' name='image3'>
+        <input type="hidden" name='product_id' value="<?php echo $dataresult['id']; ?>">
+        <input type='submit' class='btn btn-default' name="image3">
+      </form>
+  </td>
+  <td>
+    <img class='img-responsive' src='images/<?php echo $dataresult["image4"]; ?>'><br>
+      <?php echo $dataresult['image4']; ?>
+      <form action="update_image.php" method="POST" enctype="multipart/form-data" id="update_product_image">
+        <input type='file' name='image4'>
+        <input type="hidden" name='product_id' value="<?php echo $dataresult['id']; ?>">
+        <input type='submit' class='btn btn-default' name="image4">
+      </form>
+  </td>
+  <td>
+    <img class='img-responsive' src='images/<?php echo $dataresult["image5"]; ?>'><br>
+      <?php echo $dataresult['image5']; ?>
+      <form action="update_image.php" method="POST" enctype="multipart/form-data" id="update_product_image">
+        <input type='file' name='image5'>
+        <input type="hidden" name='product_id' value="<?php echo $dataresult['id']; ?>">
+        <input type='submit' class='btn btn-default' name="image5">
+      </form>
   </td>
   
+
 <?php
   echo "</tr>";
 }
@@ -116,7 +144,7 @@ while ( $dataresult= mysqli_fetch_array($datarun)) {
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
-    <?php //include 'admin_footer.php'; ?>
+    <?php include 'admin_footer.php'; ?>
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fa fa-angle-up"></i>
@@ -151,6 +179,7 @@ while ( $dataresult= mysqli_fetch_array($datarun)) {
     <script src="js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
     <script src="js/sb-admin-datatables.min.js"></script>
+    <script src="js/validate.js"></script>
   </div>
 </body>
 

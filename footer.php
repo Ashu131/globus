@@ -17,10 +17,11 @@ if (isset($_POST['contact_submit'])) {
   "User's contact details are ".$phone." and ".$visitor_email."\n".
   "Here is the message:\n".$message."";
 
-  $to = "stunningandrious@gmail.com";//<== update the email address
+  $to = "mkt.globus@gmail.com";//<== update the email address
   $headers = "From: $email_from \r\n";
   $headers .= "Reply-To: $visitor_email \r\n";
-  $headers .= "Cc: mkt.globus@gmail.com \r\n";
+  $headers .= "Cc: yatinder.kataria@yocreativ.com \r\n";
+  $headers .= "Bcc: amit.khare@yocreativ.com \r\n";
 //Send the email!
 mail($to,$email_subject,$email_body,$headers);
 //done. redirect to thank-you page.
@@ -45,17 +46,17 @@ else{
             <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="0.2s">
                 <div class="contact-content left-content" itemscope>
                     <div class="logo-title">
-                        <h1><span>G</span>lobus <span>R</span>emedies</h1>
+                        <h1><span>G</span>lobus <span>R</span>emedies L<span>.</span>T<span>.</span>D<span>.</span></h1>
                     </div>
                     <p>
 						<span itemprop="Address">
-							14/11/2, Site-4, Industrial AreaSahibabad, Ghaziabad (U.P.) 
+							14/11/2, Site-4, Industrial Area Sahibabad, Ghaziabad (U.P.) 
 							<span itemprop="postalCode">201010</span>
 						</span>
 					</p>
                     <div class="contact-info">
                         <p>
-							<b>Phone: </b><span itemprop="telephone">+91-120-4217614-17</span>
+							<b>Phone: </b><span itemprop="telephone">+91-120-4217614-17, 8744055830, 9911338489</span>
 						</p>
                         <p>
 							<b>Email: </b><span itemprop="email">mkt.globus@gmail.com</span>
@@ -102,7 +103,7 @@ else{
 			</div>
 			<div class="col-lg-5">
 				<div class="contact-area">
-					<form action="#">
+					<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 						<div class="form-group col-lg-4 wow fadeInDown animated" data-wow-delay="0.2s" >
 							<span class="text-danger"></span>
 							<input type="text" name="name" class="form-control" id="name" placeholder="NAME" required="required">
@@ -129,4 +130,3 @@ else{
 		</div>
 	</div>
 </div>
-
